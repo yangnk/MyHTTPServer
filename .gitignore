@@ -1,0 +1,15 @@
+.classpath
+.project
+.settings/
+target/
+
+.DS_Store
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/uiDesigner.xml
+.idea/workspace.xml
+mySimpleHTTPServer.iml
+out/
+src/.DS_Store
+src/main/yangnk/
