@@ -1,6 +1,12 @@
-package main.yangnk.java;
+package main.version4_0_0.version4_0_1;
 
-public enum Method {
+/**
+ * ${DESCRIPTION}
+ *
+ * @author yangningkai
+ * @create 2018-12-26 下午6:04
+ **/
+public enum  Method {
     GET("GET"),
     POST("POST"),
     PUT("PUT"),

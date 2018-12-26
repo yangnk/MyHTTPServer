@@ -1,4 +1,4 @@
-package main.server_version1_0_0;
+package main.version1_0_0;
 
 import java.io.BufferedReader;
 import java.io.IOException;

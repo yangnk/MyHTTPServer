@@ -1,10 +1,7 @@
-package main.yangnk.java;
-
-import com.sun.deploy.net.HttpRequest;
+package main.version4_0_0.java;
 
 import java.io.IOException;
 import java.net.Socket;
-import java.util.concurrent.Callable;
 
 public class HttpHandler implements Runnable {
     Socket socket;

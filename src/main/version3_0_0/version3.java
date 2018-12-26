@@ -1,4 +1,4 @@
-package main;
+package main.version3_0_0;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,7 +11,6 @@ import java.io.Writer;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.concurrent.Callable;
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -21,7 +20,6 @@ import java.util.concurrent.Executors;
  * @date Jul 14, 2016 11:35:32 AM
  */
 class ServerSocketPoolTest  {
-
     public static void main(String[] args) {
         testCommon();
     }
