@@ -12,3 +12,6 @@ target/
 mySimpleHTTPServer.iml
 out/
 src/.DS_Store
+/MyHTTPServer.iml
+/.idea/
+/out/
