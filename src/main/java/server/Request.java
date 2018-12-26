@@ -1,4 +1,4 @@
-package main.version4_0_0.version4_0_1;
+package main.java.server;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,8 +13,10 @@ import java.io.InputStreamReader;
  **/
 public class Request {
     InputStream inputStream = null;
-    String pathName = null;
+    String url = null;
     String fileName = null;
+    String method = null;
+    String header = null;
 
     public Request(InputStream input) {
         this.inputStream = input;
@@ -26,19 +28,25 @@ public class Request {
         String s = null;
         StringBuffer requestInfo = new StringBuffer();
         while ((s=bufferedReader.readLine())!=null && !s.isEmpty()) {
-            if (s.startsWith("GET")) {
-                System.out.println("this is GET method.");
-            }else if (s.startsWith("POST")) {
-                System.out.println("this is POST method.");
-            }else if (s.startsWith("PUT")) {
-                System.out.println("this is PUT method.");
-            }else if (s.startsWith("DELETE")) {
-                System.out.println("this is DELETE method.");
-            }
             requestInfo.append(s + "\n");
         }
         System.out.printf("接受到的内容：\n%s", requestInfo);
-        pathName = parseUrl(requestInfo.toString());
+        header = requestInfo.toString();
+        method = parseMethod(requestInfo.toString());
+        url = parseUrl(requestInfo.toString());
+    }
+
+    /**
+     * 解析method方法
+     * @param requestInfo
+     * @return
+     */
+    private String parseMethod(String requestInfo) {
+        int index1 = requestInfo.indexOf(" ");
+        if(index1 != -1){
+            return requestInfo.substring(0,index1);
+        }
+        return null;
     }
 
     /**
@@ -63,7 +71,7 @@ public class Request {
         return fileName;
     }
 
-    public String getPathName() {
-        return pathName;
+    public String getUrl() {
+        return url;
     }
 }

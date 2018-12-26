@@ -1,4 +1,4 @@
-package main.version4_0_0.version4_0_1;
+package main.java.server;
 
 /**
  * ${DESCRIPTION}
@@ -13,5 +13,8 @@ public enum Status {
     public final String status;
     Status(String status) {
         this.status = status;
+    }
+    public String getStatus() {
+        return status;
     }
 }

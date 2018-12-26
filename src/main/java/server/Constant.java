@@ -1,4 +1,4 @@
-package main.version4_0_0.version4_0_1;
+package main.java.server;
 
 /**
  * ${DESCRIPTION}
@@ -10,5 +10,5 @@ public class Constant {
     public static final String IP = "127.0.0.1";
     public static final String PORT = "8888";
     public static final int BUFFER_SIZE = 2048;
-
+    public static final String VERSION = "HTTP/1.1";
 }

@@ -1,4 +1,4 @@
-package main.version4_0_0.version4_0_1;
+package main.java.server;
 
 /**
  * ${DESCRIPTION}
@@ -15,5 +15,8 @@ public enum  Method {
     private final String METHOD;
     Method(String method) {
         this.METHOD = method;
+    }
+    public String getMETHOD() {
+        return METHOD;
     }
 }
